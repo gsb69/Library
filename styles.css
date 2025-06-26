@@ -1,0 +1,171 @@
+body {
+  background-color: #ab1793;
+  color: #e6edf3;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.header {
+  background: #340e66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #30363d;
+}
+
+.header img {
+  height: 50px;
+  border-radius: 8px;
+}
+
+button.add {
+  background: #238636;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 52px;
+}
+
+button.add svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+
+.bookContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+
+.book-card {
+  position: relative;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.02);
+}
+
+.book-card h3 {
+  color: #0fe4a4;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+
+.card-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.card-buttons button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.card-buttons svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.card-buttons button:hover svg {
+  transform: scale(1.1);
+}
+
+.deleteBtn svg {
+  fill: #f85149;
+}
+
+.editBtn svg {
+  fill: #3b82f6;
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: 99;
+}
+
+
+.form-pop {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #161b22;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  z-index: 100;
+  width: 320px;
+}
+
+.form-pop label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #c9d1d9;
+}
+
+.form-pop input,
+.form-pop select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #0d1117;
+  color: white;
+  border: 1px solid #30363d;
+}
+
+.form-pop button[type="submit"] {
+  background: #2ea043;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-pop button[type="button"] {
+  background: #f85149;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.form-pop button:hover {
+  opacity: 0.9;
+}
